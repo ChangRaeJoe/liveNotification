@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "live notification app",
+    "description": "twitch, chzzk, youtube notification on chrome extension",
+    "version": "1.0",
+    "icons": {
+        "128": "images/128.png"
+    },
+    "permissions": ["unlimitedStorage", "notifications"],
+    "action": {
+        "default_title": "title1234",
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content_scripts/inject.js"],
+            "css": ["content_scripts/inject.css"]
+        }
+    ]
+}
